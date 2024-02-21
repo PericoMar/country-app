@@ -1,0 +1,36 @@
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h1>Contáctame</h1>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input placeholder="Pedro Martínez González" type="text" class="form-control" id="name"
+                        formControlName="name" required>
+                    <small *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                        Por favor, introduce tu nombre.
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input placeholder="ejemplo@gmail.com" type="email" class="form-control" id="email"
+                        formControlName="email" required>
+                    <small *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                        Por favor, introduce un correo electrónico válido.
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea class="form-control" id="message" rows="3" formControlName="message" required></textarea>
+                    <small *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+                        Por favor, introduce un mensaje.
+                    </small>
+                </div>
+                <p *ngIf="contactForm.invalid">Completa el formulario para poder enviar</p>
+                <br>
+                <button class="btn btn-success" [disabled]="!contactForm.valid">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
+

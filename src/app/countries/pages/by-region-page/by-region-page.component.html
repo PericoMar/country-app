@@ -1,0 +1,18 @@
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h1>Escoge la región</h1>
+            <div>
+                <button class="btn btn-success region-btn my-2 mx-2" value="Africa" (click)="handleSearch('Africa')">Africa</button>
+                <button class="btn btn-success region-btn my-2 mx-2" value="Americas"
+                (click)="handleSearch('Americas')">Americas</button>
+                <button class="btn btn-success region-btn my-2 mx-2" value="Asia" (click)="handleSearch('Asia')">Asia</button>
+                <button class="btn btn-success region-btn my-2 mx-2" value="Europe" (click)="handleSearch('Europe')">Europe</button>
+                <button class="btn btn-success region-btn my-2 mx-2" value="Oceania"
+                (click)="handleSearch('Oceania')">Oceania</button>
+            </div>
+            <app-country-table [countries]="countriesByRegion"></app-country-table>
+        </div>
+        
+    </div>
+</section>

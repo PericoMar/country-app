@@ -1,0 +1,90 @@
+nav#sidebar{
+    width : 300px;
+    height: 100lvh;
+    border-right: 2px;
+	border-left: 0;
+	border-style: solid;
+/* 	border-image: linear-gradient(to bottom, #ccc, #555 66%, #181818) 1 100%; */
+	border-image: linear-gradient(to bottom, #eee, #181818, #eee) 1 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* sombreado a la derecha */
+  background-color: #eee;
+  z-index: 10;
+}
+
+
+
+.close-sidebar{
+  width:10px;
+  border:none;
+  position:fixed;
+  left: 320px;
+  top: 20px;
+}
+
+.close-sidebar img{
+  width: 20px;
+}
+
+.top-icon{
+  width:40px;
+}
+
+.contenedor-degradado {
+  white-space: nowrap; /* Evita que el texto se mueva a otra línea */
+}
+
+nav a{
+  font-size: large;
+}
+
+nav a.nav-title {
+  color:black;
+  text-decoration:none;
+}
+
+nav a.nav-link{
+    color:#2badad;
+}
+
+.nav-link:hover {
+    color: #068181; /* Cambia el color a tu preferencia */
+    text-decoration: underline; /* Cambia el estilo de subrayado a tu preferencia */
+}
+
+img.profile-pic{
+    width : 50px;
+}
+
+
+.info{
+  border: none;
+}
+
+.info:hover {
+    background-color: #d3d0d0;
+    border-radius: 5px; /* O cualquier valor de radio de borde que desees */
+}
+
+.dropdown-item{
+  color: black;
+}
+
+.icon{
+  width:20px;
+  margin-right: 5px;
+}
+
+.contenedor-degradado{
+  overflow:hidden;
+}
+
+button.list{
+  border:none;
+  position: fixed;
+  top:20px;
+  left:20px;
+}
+
+.list img{
+  width:30px;
+}

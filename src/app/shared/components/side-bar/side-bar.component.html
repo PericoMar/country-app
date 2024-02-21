@@ -1,0 +1,53 @@
+@if(sidebarVisible){
+  <nav id="sidebar" class="position-fixed d-flex flex-column justify-content-start" >
+    @if(botonCierreSidebar){
+      <button class="close-sidebar btn btn-white" (click)="closeSidebar()"><img src="../../../../assets/x-lg.svg" alt=""></button>
+    }
+    <a href="" class="my-4 px-4 nav-title contenedor-degradado">
+      <img src="../../../../assets/world.svg" class="top-icon" alt="">
+      <span class="px-2 ">Paises con Angular</span>
+    </a>
+    <ul class="nav flex-column justify-content-center d-flex align-items-center my-5">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about" routerLinkActive="active">Acerca de</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contacto</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/countries/by-capital" routerLinkActive="active">Por capital</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/countries/by-country" routerLinkActive="active">Por país</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/countries/by-region" routerLinkActive="active">Por región</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/countries/by-url" routerLinkActive="active">País</a>
+      </li>
+    </ul>
+  
+    <div class="d-flex justify-content-center mx-3 dropup align-self-end mb-2 mt-auto">
+      <button class="dropdown-toggle info contenedor-degradado" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="../../../../assets/foto.jpg" class="img-thumbnail rounded-circle mr-2 profile-pic" alt="Mi foto">
+        <span class="mx-2 degradado">Pedro Martínez González</span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="https://github.com/PericoMar" target="_blank"><img class="icon" src="../../../../assets/Octicons-mark-github.svg" alt="">Github</a></li>
+        <li><a class="dropdown-item" href="https://www.linkedin.com/in/pedromargonz/" target="_blank"><img class="icon" src="../../../../assets/iconmonstr-linkedin-3.png" alt="">LinkedIn</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#" routerLink="/contact"><img class="icon" src="../../../../assets/descarga.png" alt="">Contacto</a></li>
+      </ul>
+    </div>
+    
+  </nav>
+} @else {
+  <button (click)="desplegarSidebar()" class="list"><img src="../../../../assets/list.svg" alt=""></button>
+}
+
+
+

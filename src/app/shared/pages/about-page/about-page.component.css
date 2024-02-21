@@ -1,0 +1,25 @@
+img{
+    width:30%;
+    shape-outside: circle();
+    
+}
+
+img.angular{
+    float:left;
+    margin-right: 30px;
+}
+
+img.bootstrap{
+    float:right;
+    margin-left:60px;
+    margin-top:10px;
+}
+
+.destacado{
+    color:#068181;
+    font-weight: bold;
+}
+
+.title{
+    font-size:x-large;
+}

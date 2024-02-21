@@ -1,0 +1,24 @@
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>Buscar país por ID</h2>
+            <p>Recuerda que puedes buscar un país utilizando su ID en la URL. Utiliza la ruta
+                <code>/countries/:id</code> y reemplaza <code>:id</code> con el ID del país que deseas buscar.</p>
+
+            <h3>Ejemplo:</h3>
+            <p>Para buscar España, puedes utilizar el ID del país o el código ISO Alpha-2. Por ejemplo, para España, el
+                código ISO Alpha-2 es <strong>ES</strong>.</p>
+            <p>Para buscar por ID, la URL sería: <code>/countries/ES</code>.</p>
+
+            <h3>Buscar país:</h3>
+            <ul>
+                <!-- Lista de varios países -->
+                <li><a routerLinkActive="active" routerLink="/countries/ES">España (ES)</a></li>
+                <li><a routerLink="/countries/US">Estados Unidos (US)</a></li>
+                <li><a routerLink="/countries/FR">Francia (FR)</a></li>
+                <li><a routerLink="/countries/DE">Alemania (DE)</a></li>
+                <li><a routerLink="/countries/IT">Italia (IT)</a></li>
+            </ul>
+        </div>
+    </div>
+</section>

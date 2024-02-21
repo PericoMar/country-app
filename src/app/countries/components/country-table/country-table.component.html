@@ -1,0 +1,29 @@
+
+@if(countries.length === 0){
+  <div class="alert alert-warning text-center">No hay países que mostrar... </div>
+} @else {
+  <div class="table table-hover">
+  <thead>
+    <tr>
+      <th>Icono</th>
+      <th>Bandera</th>
+      <th>Nombre</th>
+      <th>Capital</th>
+      <th>Población</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(country of countries; track country.cca3){
+        <tr>
+          <td>{{ country.altSpellings[0] }}</td>
+          <td><img src="{{ country.flags.png }}" alt="{{ country.name.common }} flag"></td>
+          <td>{{ country.name.common }}</td>
+          <td>{{ country.capital }}</td>
+          <td>{{ country.population }}</td>
+          <td [routerLink]="['/countries/', country.cca3]">Ver más...</td>
+        </tr>
+    }
+  </tbody>
+  </div>
+}
